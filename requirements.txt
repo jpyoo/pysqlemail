@@ -1,0 +1,4 @@
+openpyxl==3.0.9
+pandas==1.2.1
+pyodbc==4.0.32
+SQLAlchemy==1.4.29
