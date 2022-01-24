@@ -28,6 +28,8 @@ def sendMail(email_data):
         msg["From"] = emailfrom
         msg["To"] = ", ".join(emailto)
         msg["Subject"] = elem
+    #     msg.attach(MIMEText("style,color,status,ohs,eta,avail,ata"))
+    #     msg.preamble = "help I cannot send an attachment to save my life"
         elem = os.path.join("C:/emailreport/data/", elem)
         ctype, encoding = mimetypes.guess_type(elem)
         if ctype is None or encoding is not None:
@@ -54,7 +56,7 @@ def sendMail(email_data):
             attachment.set_payload(fp.read())
             fp.close()
             encoders.encode_base64(attachment)
-        attachment.add_header("Content-Disposition", "attachment", filename=msg["Subject"])
+        attachment.add_header("Content-Disposition", "attachment", filename=elem)
         msg.attach(attachment)
 
         server = smtplib.SMTP("smtp.office365.com:587")

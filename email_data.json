@@ -1,0 +1,11 @@
+{
+	"emails" : {
+		"senderEmail" : "sender@email.com",
+		"senderPW" : "emailPW",
+		"receiverEmails" : ["receiver@email.com", "additional@email.com"],
+	
+	"reports" : {
+		"reportList" : ["Sold Out Wiht OH.csv","additional.csv"]
+		}
+	}
+}
